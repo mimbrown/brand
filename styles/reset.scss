@@ -1,0 +1,28 @@
+:root {
+  // Color scheme
+  --primary: var(--theme-primary);
+  --on-primary: var(--theme-on-primary);
+  --secondary: var(--theme-secondary);
+  --on-secondary: var(--theme-on-secondary);
+  --background: var(--theme-background);
+  --on-background: var(--theme-on-background);
+  --surface: var(--theme-surface);
+  --on-surface: var(--theme-on-surface);
+  --error: var(--theme-error);
+  --on-error: var(--theme-on-error);
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: rgb(var(--theme-background));
+  color: rgb(var(--theme-on-surface));
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+.card {
+  border-radius: 4px;
+  background-color: rgb(var(--theme-surface));
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  display: flex;
+  flex-direction: column;
+  h6 {
+    padding: 16px 16px 0;
+  }
+  .content {
+    padding: 16px 16px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .actions {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 8px 0;
+    button,[role=button] {
+      margin-inline-end: 8px;
+    }
+  }
+}

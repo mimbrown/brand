@@ -1,0 +1,134 @@
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  min-width: 190px;
+}
+
+.sublabel {
+  margin: 2px 0 0;
+  color: rgba(var(--on-surface),0.84);
+  font-size: .75em;
+  padding: 0 16px;
+}
+
+input:required ~ .label-text::after {
+  content: " *";
+}
+
+.text input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,.38);
+  outline: none;
+  padding: 13px 15px 11px;
+  &:hover {
+    border-color: black;
+  }
+  &:focus {
+    border-width: 2px;
+    border-color: rgb(var(--primary));
+    padding: 12px 14px 10px;
+    + .label-text {
+      color: rgb(var(--primary));
+    }
+  }
+}
+
+.label-text {
+  user-select: none;
+}
+
+.text .label-text {
+  position: absolute;
+  left: 12px;
+  top: 2px;
+  bottom: 0;
+  margin: auto;
+  pointer-events: none;
+  padding: 0 4px;
+  transition: top 100ms, font-size 100ms;
+  height: fit-content;
+}
+
+.text input:focus + .label-text,
+.text input.filled + .label-text {
+  margin: 0;
+  top: -.5em;
+  bottom: unset;
+  font-size: .75em;
+  background-color: rgb(var(--background));
+}
+
+[type=checkbox],
+[type=radio] {
+  opacity: 0;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+.switch .label-text {
+  margin-left: 4px;
+}
+
+// Place the toggle over the input field
+.replace-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+// States
+input:not(:disabled) + .replace-toggle {
+  cursor: pointer;
+}
+input:not(:disabled) + .replace-toggle:hover {
+  background-color: rgba(var(--primary),0.08);
+}
+input:focus + .replace-toggle {
+  background-color: rgba(var(--primary),0.24) !important;
+}
+
+.replace-toggle::after {
+  font-family: 'Material Icons';
+  font-size: 18px;
+}
+input:disabled + .replace-toggle::after {
+  color: rgba(var(--on-surface), 0.37);
+}
+input:checked:not(:disabled) + .replace-toggle::after {
+  color: rgba(var(--primary));
+}
+
+[type=checkbox]:not(:checked) + .replace-toggle::after {
+  content: "check_box_outline_blank";
+}
+[type=checkbox]:checked + .replace-toggle::after {
+  content: "check_box";
+}
+[type=checkbox].toggle + .replace-toggle::after {
+  font-size: 24px;
+}
+[type=checkbox].toggle:not(:checked) + .replace-toggle::after {
+  content: "toggle_off";
+}
+[type=checkbox].toggle:checked + .replace-toggle::after {
+  content: "toggle_on";
+}
+[type=radio]:not(:checked) + .replace-toggle::after {
+  content: "radio_button_unchecked";
+}
+[type=radio]:checked + .replace-toggle::after {
+  content: "radio_button_checked";
+}

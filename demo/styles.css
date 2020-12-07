@@ -1,0 +1,90 @@
+:root {
+  font-family: Roboto, sans-serif;
+  --theme-primary: 170,57,57;
+  --theme-on-primary: 255,255,255;
+  --theme-secondary: 170,57,57;
+  --theme-on-secondary: 255,255,255;
+  --theme-background: 255,255,255;
+  --theme-on-background: 0,0,0;
+  --theme-surface: 245,245,245;
+  --theme-on-surface: 0,0,0;
+  --theme-error: 255,0,0;
+  --theme-on-error: 255,255,255;
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --theme-primary: 179,174,171;
+    --theme-on-primary: 38,50,56;
+    --theme-secondary: 179,174,171;
+    --theme-on-secondary: 38,50,56;
+    --theme-background: 38,50,56;
+    --theme-on-background: 179,174,171;
+    --theme-surface: 38,50,56;
+    --theme-on-surface: 179,174,171;
+    --theme-error: 255,0,0;
+    --theme-on-error: 38,50,56;
+  }
+} */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 8px;
+}
+section {
+  margin: 8px 0;
+}
+code {
+  background-color: black;
+  padding: 8px;
+  color: white;
+}
+.grid {
+  display: grid;
+  gap: 16px;
+  /* grid-template-columns: repeat(2, auto); */
+  /* grid-template-columns: repeat(auto-fill, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr) minmax(140px, 1fr));
+  /* grid-auto-columns: auto; */
+  justify-items: center;
+  align-items: center;
+  max-width: 800px;
+}
+.flex-grid {
+  display: grid;
+  gap: 16px;
+  /* grid-template-columns: repeat(2, auto); */
+  /* grid-template-columns: repeat(auto-fill, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  /* grid-auto-columns: auto; */
+  /* justify-items: start; */
+  /* max-width: 800px; */
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+.flex-wrap > * {
+  flex: 1;
+  margin: 0 4px;
+}
+/* .switch-theme {
+  --primary: 255,255,255;
+  --on-primary: 170,57,57;
+  --surface: 170,57,57;
+  --on-surface: 255,255,255;
+  background-color: rgb(var(--surface));
+  margin-top: 10px;
+  padding: 10px;
+} */
+h4 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px !important;
+}
+
+.card .content {
+  -webkit-line-clamp: 4;
+}

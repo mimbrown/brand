@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 16px;
+  background-color: rgb(var(--theme-primary));
+  color: rgb(var(--theme-on-primary));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  --primary: var(--theme-surface);
+  --on-primary: var(--theme-on-surface);
+  --surface: var(--theme-primary);
+  --on-surface: var(--theme-on-primary);
+  .primary-actions,.secondary-actions {
+    flex: 1;
+    display: flex;
+    > *:not(:last-child) {
+      margin-inline-end: 24px;
+    }
+  }
+  .secondary-actions {
+    justify-content: flex-end;
+  }
+}

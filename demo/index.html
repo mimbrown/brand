@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Brand Test</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons|Google+Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="base.css">
+</head>
+<body>
+  <header>
+    <div class="primary-actions">
+      <button class="icon"><i class="material-icons">menu</i></button>
+    </div>
+    <h6 class="title">
+      Styles
+    </h6>
+    <div class="secondary-actions">
+      <button class="icon"><i class="material-icons">share</i></button>
+      <button class="icon"><i class="material-icons">search</i></button>
+      <button class="icon"><i class="material-icons">more_vert</i></button>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h4>Buttons</h4>
+      <!-- <h4>Syntax</h4>
+      <code>&lt;button | * role="button"&gt;Label&lt;/button | *&gt;</code> -->
+      <div class="grid">
+        <button>Default</button>
+        <button disabled>Default</button>
+        <button><i class="material-icons">favorite</i> Default</button>
+        <button class="icon"><i class="material-icons">favorite</i></button>
+        <button class="outlined">Outlined</button>
+        <button disabled class="outlined">Outlined</button>
+        <button class="outlined"><i class="material-icons">favorite</i> Outlined</button>
+        <button class="outlined icon"><i class="material-icons">favorite</i></button>
+        <button class="contained">Contained</button>
+        <button disabled class="contained">Contained</button>
+        <button class="contained"><i class="material-icons">favorite</i> Contained</button>
+        <button class="contained icon"><i class="material-icons">favorite</i></button>
+      </div>
+      <!-- <div class="grid switch-theme">
+        <button>Default</button>
+        <button><i class="material-icons">favorite</i> Default</button>
+        <button class="icon"><i class="material-icons">favorite</i></button>
+        <button disabled>Default</button>
+        <button class="outlined">Outlined</button>
+        <button class="outlined"><i class="material-icons">favorite</i> Outlined</button>
+        <button class="outlined icon"><i class="material-icons">favorite</i></button>
+        <button disabled class="outlined">Outlined</button>
+        <button class="contained">Contained</button>
+        <button class="contained"><i class="material-icons">favorite</i> Contained</button>
+        <button class="contained icon"><i class="material-icons">favorite</i></button>
+        <button disabled class="contained">Contained</button>
+      </div> -->
+    </section>
+    <section>
+      <h4>Cards</h4>
+      <div class="flex-grid">
+        <div class="card">
+          <h6>Lorem Ipsum</h6>
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="actions">
+            <button class="contained">View More</button>
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h4>Forms</h4>
+      <!-- <form> -->
+      <form>
+        <div class="flex-wrap">
+          <div>
+            <label class="text">
+              <input type="text">
+              <span class="label-text">Text</span>
+            </label>
+            <p class="sublabel">Help text</p>
+          </div>
+          <label class="text">
+            <input type="email" required>
+            <span class="label-text">Email</span>
+          </label>
+          <label class="text">
+            <input type="password" required>
+            <span class="label-text">Password</span>
+          </label>
+        </div>
+        <div class="flex-wrap">
+          <label class="switch">
+            <input type="checkbox" required>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Checkbox</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" disabled>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled Off Checkbox</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" disabled checked>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled On Checkbox</span>
+          </label>
+        </div>
+        <div class="flex-wrap">
+          <label class="switch">
+            <input type="checkbox" class="toggle">
+            <span class="replace-toggle"></span>
+            <span class="label-text">Toggle</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" class="toggle" disabled>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled Off Toggle</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" class="toggle" disabled checked>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled On Toggle</span>
+          </label>
+        </div>
+        <div class="flex-wrap">
+          <div>
+            <label class="switch">
+              <input type="radio" name="radio-group">
+              <span class="replace-toggle"></span>
+              <span class="label-text">Radio 1</span>
+            </label>
+            <label class="switch">
+              <input type="radio" name="radio-group">
+              <span class="replace-toggle"></span>
+              <span class="label-text">Radio 2</span>
+            </label>
+          </div>
+          <label class="switch">
+            <input type="radio" disabled>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled Off Radio</span>
+          </label>
+          <label class="switch">
+            <input type="radio" disabled checked>
+            <span class="replace-toggle"></span>
+            <span class="label-text">Disabled On Radio</span>
+          </label>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script>
+    function toggleItem() {
+      this.classList.toggle('filled', !!this.value);
+    }
+    document.querySelectorAll('label input').forEach((input) => {
+      input.addEventListener('change', toggleItem);
+    });
+  </script>
+</body>
+</html>
