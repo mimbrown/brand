@@ -64,7 +64,7 @@ code {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding: 0 4px;
+  padding: 12px 4px 0;
 }
 .flex-wrap > * {
   flex: 1;
